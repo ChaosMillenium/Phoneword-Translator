@@ -1,16 +1,8 @@
 package phonewordTranslator;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import java.awt.FlowLayout;
-import javax.swing.JTextField;
-import java.awt.GridLayout;
 import javax.swing.JButton;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;

@@ -75,7 +75,9 @@ public class Translator {
 	public String translateTextToPhone(String toTranslate) {
 		StringBuilder sb = new StringBuilder();
 		for (Character ch : toTranslate.toCharArray()) {
-			if (textToPhoneMap.containsKey(ch)) {
+			if (ch.equals('\n'))
+				sb.append('\n');
+			else if (textToPhoneMap.containsKey(ch)) {
 				sb.append(textToPhoneMap.get(ch));
 				sb.append(" ");
 			}
@@ -90,10 +92,16 @@ public class Translator {
 		StringBuilder phoneword = new StringBuilder();
 		boolean lastIsBlank = false;
 		for (Character ch : tt.toString().toCharArray()) {
-			if (ch.equals(' ') && !lastIsBlank) {
-				if (phoneToTextMap.containsKey(phoneword.toString())) {
+			if (ch.equals('\n')) {
+				if (phoneToTextMap.containsKey(phoneword.toString()))
 					sb.append(phoneToTextMap.get(phoneword.toString()));
-				}
+				sb.append('\n');
+				phoneword.setLength(0);
+				lastIsBlank = true;
+			}
+			else if (ch.equals(' ') && !lastIsBlank) {
+				if (phoneToTextMap.containsKey(phoneword.toString()))
+					sb.append(phoneToTextMap.get(phoneword.toString()));
 				phoneword.setLength(0);
 				lastIsBlank = true;
 			} else {
