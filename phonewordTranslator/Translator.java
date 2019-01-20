@@ -26,6 +26,7 @@ public class Translator {
 		textToPhoneMap.put('M', "6");
 		textToPhoneMap.put('N', "66");
 		textToPhoneMap.put('O', "666");
+		textToPhoneMap.put('Ñ', "6666");
 		textToPhoneMap.put('P', "7");
 		textToPhoneMap.put('Q', "77");
 		textToPhoneMap.put('R', "777");
@@ -54,6 +55,7 @@ public class Translator {
 		textToPhoneMap.put('m', "6");
 		textToPhoneMap.put('n', "66");
 		textToPhoneMap.put('o', "666");
+		textToPhoneMap.put('ñ', "6666");
 		textToPhoneMap.put('p', "7");
 		textToPhoneMap.put('q', "77");
 		textToPhoneMap.put('r', "777");
